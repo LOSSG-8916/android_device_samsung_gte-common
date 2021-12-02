@@ -41,11 +41,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
 	frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
-
-# append the updater uri to the product properties if set
-ifneq ($(CM_UPDATER_OTA_URI),)
-	PRODUCT_PROPERTY_OVERRIDES += $(CM_UPDATER_OTA_URI)
-endif
+	
 
 # Screen density
 PRODUCT_CHARACTERISTICS := tablet
