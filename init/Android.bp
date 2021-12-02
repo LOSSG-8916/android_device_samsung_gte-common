@@ -14,13 +14,14 @@
 // limitations under the License.
 //
 
-
 cc_library_static {
     name: "libinit_gte",
     recovery_available: true,
     srcs: ["init_gte.cpp"],
     include_dirs: [
+        "device/samsung/msm8916-common/init",
         "system/core/base/include",
         "system/core/init",
-    ]
+    ],
+    whole_static_libs: ["libinit_helpers_sam8916"]
 }
