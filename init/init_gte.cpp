@@ -50,7 +50,7 @@ void vendor_load_properties()
         set_ro_build_prop("fingerprint", "samsung/gtesqltespr/gtesqltespr:7.1.1/NMF26X/T377PVPU3CQI4:user/release-keys");
         set_ro_product_prop("model", "SM-T377P");
         set_ro_product_prop("name", "gtesqltespr");	
-		cdma_properties("Default", "310000", "0", "10");
+        cdma_properties("Sprint", "310120", "1", "8");
 	} else if (bootloader.find("T560NUU") == 0) {
 		/* gtelwifiue */
         property_override("ro.build.description", "gtelwifiue-user 7.1.1 NMF26X T560NUUEU1CRG1 release-keys");
