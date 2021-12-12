@@ -27,6 +27,9 @@ USE_QCOM_MIXER_PATHS := 1
 # Charger
 BOARD_NO_CHARGER_LED := true
 
+# Radio
+BOARD_PROVIDES_LIBRIL := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_gte
 
