@@ -31,11 +31,15 @@ DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-	init.target.rc
+    init.target.rc
 
 # Media (camera) configuration files
 PRODUCT_COPY_FILES += \
-	$(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+    $(DEVICE_PATH)/configs/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
+
+# LPM
+PRODUCT_PACKAGES += \
+    libsuspend
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -43,18 +47,15 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-	frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
-	frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
-	
+    frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/tablet_core_hardware.xml
+
 # Radio
 PRODUCT_PACKAGES += \
     libsecnativefeature
 
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Vibrator
