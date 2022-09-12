@@ -59,4 +59,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 # Inhert dalvik heap values from aosp
-$(call inherit-product, frameworks/native/build/tablet-7in-xhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
